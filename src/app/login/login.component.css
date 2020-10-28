@@ -1,0 +1,11 @@
+:host{
+    width: 100% !important;
+    height: 65vh;
+}
+
+.card{
+    height: 100%;
+    width: 50%;
+    margin-top: 3% !important;
+    background-color: #F5F3B2;
+}

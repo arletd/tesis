@@ -1,0 +1,131 @@
+<form>
+    <br>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h3 style="text-align: center;">¡Cuéntanos sobre tu evento!</h3>
+            <br>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="tipoEvento">Tipo de evento</label>
+                        <select id="tipoEvento" class="form-control">
+                            <option disabled selected>Selecciona un evento</option>
+                            <option value="Bautizo">Bautizo</option>
+                            <option value="Primera comunión">Primera comunión</option>
+                            <option value="Boda">Boda</option>
+                            <option value="Despedida de solter@">Despedida de solter@</option>
+                            <option value="Cumpleaños">Cumpleaños</option>
+                            <option value="Aniversario">Aniversario</option>
+                            <option value="Revelación de sexo">Revelación de sexo</option>
+                            <option value="Otro">Otro (especifique en los comentarios)</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="fechaEvento">Fecha</label>
+                        <input type="date" class="form-control" id="fechaEvento" >
+                    </div>
+                </div>
+                <h6>Locación</h6>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <select id="ciudad" class="form-control">
+                                <option disabled selected>Selecciona una ciudad</option>
+                                <option value="Ciudad de México">Ciudad de México</option>
+                                <option value="Cancún">Cancún</option>
+                                <option value="Playa del Carmen">Playa del Carmen</option>
+                                <option value="San Luis Potosí">San Luis Potosí</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="tipoLocacion">Tipo</label>
+                        <select id="tipoLocacion" class="form-control">
+                            <option disabled selected>Selecciona un tipo</option>
+                            <option value="Jardín">Jardín</option>
+                            <option value="Salón en hotel">Salón en hotel</option>
+                            <option value="Salón independiente">Salón independiente</option>
+                            <option value="Bar/Restaurante">Bar/Restaurante</option>
+                            <option value="Otro">Otro (especifique en los comentarios)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputCity">¿Habrá ceremonia?</label>
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="conCeremonia" value="Con ceremonia">
+                        <label class="form-check-label" for="conCeremonia">Sí</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sinCeremonia" value="Sin ceremonia">
+                        <label class="form-check-label" for="sinCeremonia">No</label>
+                    </div>
+                </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3 offset-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ceremoniaReligiosa" value="Religiosa">
+                            <label class="form-check-label" for="ceremoniaReligiosa">Religiosa</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ceremoniaLegal" value="Legal">
+                            <label class="form-check-label" for="ceremoniaLegal">Legal</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cerReligiosaLegal" value="Religiosa y legal">
+                            <label class="form-check-label" for="cerReligiosaLegal">Ambas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="numInvitados">Número de invitados</label>
+                        <input type="text" class="form-control" id="numInvitados">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="presupuesto">Presupuesto</label>
+                        <input type="text" class="form-control" id="presupuesto">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="comentarios">¿Quieres decirnos algo más?</label>
+                    <input type="text" class="form-control" id="comentarios">
+                </div>
+                <h3 style="text-align: center;">¿Dónde te podemos contactar?</h3>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="mail">Correo electrónico</label>
+                    <input type="email" class="form-control" id="mail">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4 offset-md-4">
+                        <button type="button" class="btn btnGrey w-100" (click)="enviarInfo();">Enviar</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label>*Los datos proporcionados sirven para crear una propuesta inicial. </label>
+                        <label>**Envíar tus datos no te compromete a continuar con el servicio.</label>
+                    </div>
+                </div>
+            <br>
+        </div>
+    </div>
+</form>

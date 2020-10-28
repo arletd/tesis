@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+:host {            
+    display: block;
+    left: 3rem;
+    margin: 0%;
+}
+
+.ingresar{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #cbb46f !important;
+  }
+
+.btnGrey{
+  background-color: #47525E;
+  border: #8492A6;
+  color: #FFFFFF;
+}

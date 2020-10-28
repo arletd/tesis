@@ -1,0 +1,36 @@
+<div class="row">
+    <div class=" col-12" >
+        <div class="card  my-auto mx-auto">
+            <div class="card-body">
+              <form [formGroup]="form">
+                <h1 class="h4 mb-3 font-weight-normal">Ingreso</h1>
+                <p>Podrás ver todos los detalles de tu evento cuando hayas ingresado</p>
+                <label for="inputEmail" class="sr-only">Usuario</label>
+                <input type="email" id="inputUser" class="form-control" placeholder="Usuario" formControlName="emailInput" autofocus="" >
+                <div class="error-msg" *ngIf="(this.form.get('emailInput').invalid && (this.form.get('emailInput').dirty || this.form.get('emailInput').touched))">
+                  ERROR: Invalid email
+                </div>
+                
+                
+                <br>
+                <label for="inputPassword" class="sr-only">Contraseña</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" formControlName="psswd">
+                <div class="error-msg" *ngIf="(this.form.get('psswd').invalid && (this.form.get('psswd').dirty || this.form.get('psswd').touched))">
+                  ERROR: Password required
+                </div>
+                
+                <br>
+                <div class="checkbox mb-3" style="display: none;">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Recuerdame
+                  </label>
+                </div>
+                
+                <button class="btn btn-lg btnGrey btn-block" [disabled]="this.form.invalid" type="submit" (click)="submit()">Ingresar</button>
+            </form>
+            </div>
+        </div>
+        
+    </div>
+ 
+</div>

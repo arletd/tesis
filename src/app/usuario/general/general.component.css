@@ -1,0 +1,19 @@
+.barra{
+    background-color: blue !important;
+}
+
+.btn-bar{
+    background-color:#FFFFFF ;
+    border: #cbb46f;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-bar:hover {
+    background-color: #cbb46f;
+}
+
+.btn-bar:active {
+    background-color: #cbb46f;
+    transform: translateX(1px);
+  }

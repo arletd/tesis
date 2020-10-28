@@ -1,0 +1,41 @@
+:host {            
+  display: block;
+  left: 0;
+  margin: 0%;
+  width: 100%; 
+  height: 100%  
+}
+
+.header{
+    background-color:#454545;
+    color:  #cbb46f;
+}
+
+img {
+    border: 1px solid #cbb46f;
+    vertical-align: middle; 
+    margin: auto;
+  }
+
+.titulo{
+    /*padding: 1% 0% !important;*/
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+
+
+
+.cuerpo{
+  background-color: #EADA9D;
+}
+.footer {
+  background-color: #454545;
+  color: #F7F7F7;
+}
+
+.about {
+  color:  #F7F7F7 !important;
+  font-size: 1.2em !important;
+  text-align:center;
+}
