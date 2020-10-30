@@ -1,1 +1,192 @@
-<p>banquete works!</p>
+<div class="row">
+    <div class="col-12   justify-content-center">
+        <div class="card w-100 h-100 bg-transparent border-0">
+            <div class="card-body ">
+                <h2>Banquete</h2>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="tipoEvento">Tiempos de menú (sin postre)</label>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <select id="tipoEvento" class="form-control">
+                            <option disabled selected>Selecciona un número de tiempos</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputCity">¿Habrá postre y/o pastel?</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pastel" value="Postre">
+                            <label class="form-check-label" for="pastel">Pastel</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="postre" value="Pastel">
+                            <label class="form-check-label" for="postre">Postre</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ambos" Amboslue="Postre y pastel">
+                            <label class="form-check-label" for="ambos">Ambos</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ninguno" Amboslue="Ni postre ni pastel">
+                            <label class="form-check-label" for="ninguno">Ninguno</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">¿Habrá aperitivos?</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="aperitivos" value="Con aperitivos">
+                            <label class="form-check-label" for="aperitivos">Sí</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noAperitivos" value="Sin aperitivos">
+                            <label class="form-check-label" for="noAperitivos">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">¿Requiere menú infantil?</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="menuInfantil" value="Con menu infantil">
+                            <label class="form-check-label" for="menuInfantil">Sí</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noMenuInfantil" value="Sin menu infantil">
+                            <label class="form-check-label" for="noMenuInfantil">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">¿El menú general es vegetariano o vegano?</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="vegetariano" value="vegetariano">
+                            <label class="form-check-label" for="vegetariano">Vegetariano</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="vegano" value="vegano">
+                            <label class="form-check-label" for="vegano">Vegano</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noVeggie" value="Ni vegetariano ni vegano">
+                            <label class="form-check-label" for="noVeggie">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">¿Se requieren algunos menús vegetarianos o veganos?</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="someVegetariano" value="Algun vegetariano">
+                            <label class="form-check-label" for="someVegetariano">Vegetariano</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="someVegano" value="Algun vegano">
+                            <label class="form-check-label" for="someVegano">Vegano</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ningunVeggie" value="Ningun vegetariano ni vegano">
+                            <label class="form-check-label" for="ningunVeggie">No</label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+    </div>
+    <div class="col-12  justify-content-center">
+        <div class="card w-100 h-100 bg-transparent border-0">
+            <div class="card-body ">
+                <h2>Bebidas</h2>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">¿Habrá coctel de bienvenida?</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="coctelBienvenida" value="Con coctel de bienvenida">
+                            <label class="form-check-label" for="coctelBienvenida">Sí</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noCoctelBienvenida" value="Sin coctel de bienvenida">
+                            <label class="form-check-label" for="noCoctelBienvenida">No</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">¿Habrá alcohol durante el evento?</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="alcohol" value="Con alcohol">
+                            <label class="form-check-label" for="alcohol">Sí</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="noAlcohol" value="Sin alcohol">
+                            <label class="form-check-label" for="noAlcohol">No</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>¿Qué tipos de alcohol te gustaría que hubieran?</p>
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="tiposAlcohol">    
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2 offset-5">
+        <button type="button" class="btn btnGrey mx-auto">Guardar todo</button>
+    </div>
+</div>
+<br>
