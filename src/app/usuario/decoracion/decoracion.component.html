@@ -10,17 +10,11 @@
                     </div>
                 </div>
                 <br>
-                <p>¿Tienes fotos de inspiración?</p>
+                <p>¿Tienes fotos de inspiración? <br> (Puedes cargar varios archivos a la vez)</p>
                 <div class="form-row">
                     <div class="form-group col-12">
-                        <div class="input-group mb-3">
-                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="imagenesDecoración" multiple lang="es">
-                              <label class="custom-file-label" for="imagenesDecoración">Busca tus imágenes</label>
-                            </div>
-                            <div class="input-group-append">
-                              <button type="button" class="input-group-text" id="">Cargar</button>
-                            </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" multiple (input)="subirArchivo()">
                           </div>
                     </div>
                 </div>
@@ -29,10 +23,14 @@
                 <div class="form-row">
                     <div class="form-group col-12">
                         <div class="input-group mb-3">
-                            <div class="form-group">
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1" multiple (input)="subirArchivo()">
-                              </div>
-                          </div>
+                            <input type="text" class="form-control" id="ligas">    
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 offset-5">
+                        <button type="button" class="btn btnGrey mx-auto">Guardar todo</button>
+
                     </div>
                 </div>
             </div>
