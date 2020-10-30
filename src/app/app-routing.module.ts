@@ -5,8 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent} from './login/login.component';
 import { FormularioInicialComponent } from './formulario-inicial/formulario-inicial.component';
 import { GeneralComponent } from './usuario/general/general.component';
-import { PantallaInicioComponent } from './usuario/pantalla-inicio/pantalla-inicio.component';
-import { BanqueteComponent} from './usuario/banquete/banquete.component';
+import { OrganizadorComponent } from './organizador/organizador.component';
 
 
 const routes: Routes = [
@@ -29,6 +28,10 @@ const routes: Routes = [
   {
     path: 'general',
     component: GeneralComponent,
+  },
+  {
+    path: 'organizador',
+    component: OrganizadorComponent,
   },
   { 
     path: '', 

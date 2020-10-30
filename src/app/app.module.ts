@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { FormularioInicialComponent } from './formulario-inicial/formulario-inicial.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OrganizadorComponent } from './organizador/organizador.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ExtrasComponent,
     LoginComponent,
     AboutComponent,
-    FormularioInicialComponent
+    FormularioInicialComponent,
+    OrganizadorComponent
   ],
   imports: [
     BrowserModule,

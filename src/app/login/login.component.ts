@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit(){
-    this.router.navigate(['/general']);
+    this.router.navigate(['/organizador']);
     this.app.in=true;
 
   }

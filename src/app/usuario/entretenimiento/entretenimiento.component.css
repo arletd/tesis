@@ -1,0 +1,14 @@
+p{
+    font-family: verdana;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.card-option{
+    background-color: #F5F3B2;
+    border-color: #cbb46f;
+}
+
+.custom-file-input ~ .custom-file-label::after {
+    content: "Elegir";
+}

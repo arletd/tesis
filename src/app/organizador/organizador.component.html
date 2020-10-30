@@ -1,0 +1,209 @@
+<div class="row">
+    <div class="col-12  justify-content-center">
+        <div class="card w-100 h-100 bg-transparent border-0">
+            <div class="card-body ">
+                <h2>Bienvenida a tu tablero Irma</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row row-cols-2">
+    <div class="col-12  justify-content-center">
+        <div class="card w-100 h-100 bg-transparent border-0">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Información</h3>
+                        <div class="row" id="panelCeremoniaInfo">
+                            <div class="col">
+                                <h4>Ceremonia</h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Fecha: <span id="fechaCer1prop"></span> </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Tipo: <span id="tipoCer1prop"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Dirección: <span id="dirCer1"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Capacidad: <span id="capCer1"></span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Detalles: <span id="detCer1"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h3>Propuestas</h3>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="categoria">Categoría</label>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <select id="categoria" class="form-control">
+                                    <option disabled selected>Selecciona una categoría</option>
+                                    <option value="Ceremonia">Ceremonia</option>
+                                    <option value="Locación">Locación</option>
+                                    <option value="Decoración">Decoración</option>
+                                    <option value="Banquete y bebidas">Banquete y bebidas</option>
+                                    <option value="Entretenimiento">Entretenimiento</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row" id="panelCeremonia">
+                            <div class="col">
+                                <h4>Ceremonia</h4>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="fotosCeremonia1">Fotos:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="form-group">
+                                            <input type="file" class="form-control-file" id="fotosCeremonia1" multiple >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="direccionCeremonia1">Dirección:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="direccionCeremonia1">    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="capacidadCeremonia1">Capacidad:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="capacidadCeremonia1">    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="detallesCeremonia1">Detalles:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="detallesCeremonia1">    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 offset-5 justify-content-center">
+                                        <button type="button" class="btn btnGrey" (click)="prueba()">Guardar</button>
+                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="panelLocacion">
+                            <div class="col">
+                                <h4>Locación</h4>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="fotosLocacion1">Fotos:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="form-group">
+                                            <input type="file" class="form-control-file" id="fotosLocacion1" multiple >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="direccionLocacion1">Dirección:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="direccionLocacion1">    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="capacidadLocacion1">Capacidad:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="capacidadLocacion1">    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="detallesLocacion1">Detalles:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="detallesLocacion1">    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 offset-5 justify-content-center">
+                                        <button type="button" class="btn btnGrey">Guardar</button>
+                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="panelDecoracion">
+                            <div class="col">
+                                <h4>Decoración</h4>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="fotosDecoracion1">Fotos:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="form-group">
+                                            <input type="file" class="form-control-file" id="fotosDecoracion1" multiple >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="detallesDecoracion1">Detalles:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="detallesDecoracion1">    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 offset-5 justify-content-center">
+                                        <button type="button" class="btn btnGrey">Guardar</button>
+                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="panelBanquete">
+                            <div class="col">
+                                <h4>Banquete</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
