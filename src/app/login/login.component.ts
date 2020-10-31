@@ -25,9 +25,6 @@ export class LoginComponent implements OnInit {
     var user=((document.getElementById("inputUser") as HTMLInputElement).value);
     var psswd=((document.getElementById("inputPassword") as HTMLInputElement).value);
     this.login(user,psswd);
-    //this.router.navigate(['/organizador']);
-    //this.app.in=true;
-
   }
 
   login(email: string, password: string) {
