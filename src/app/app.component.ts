@@ -15,4 +15,8 @@ export class AppComponent {
     alert("Cerrando sesión");
     this.in = false;
   }
+
+  login(){
+    console.log("mequierenloguear");
+  }
 }

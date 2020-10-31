@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import { AppComponent } from './app.component';
 import { GeneralComponent } from './usuario/general/general.component';
 import { PrincipalComponent } from './principal/principal.component';
@@ -18,6 +23,16 @@ import { FormularioInicialComponent } from './formulario-inicial/formulario-inic
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OrganizadorComponent } from './organizador/organizador.component';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBucAHuj7DkXXdnoAmZaZDCUPJK8lZfB68",
+  authDomain: "tesita-6885a.firebaseapp.com",
+  databaseURL: "https://tesita-6885a.firebaseio.com",
+  projectId: "tesita-6885a",
+  storageBucket: "tesita-6885a.appspot.com",
+  messagingSenderId: "663947755480",
+  appId: "1:663947755480:web:fc851eaa86986c57677cad"
+};
 
 @NgModule({
   declarations: [
@@ -41,6 +56,10 @@ import { OrganizadorComponent } from './organizador/organizador.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule // storage
   ],
   providers: [],
   bootstrap: [AppComponent]
