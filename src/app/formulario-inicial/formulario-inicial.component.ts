@@ -45,7 +45,7 @@ export class FormularioInicialComponent implements OnInit {
       }
       var numInvitados = (document.getElementById("numInvitados") as HTMLInputElement).value;
       var presupuesto = (document.getElementById("presupuesto") as HTMLInputElement).value;
-      var comentarios = (document.getElementById("tipoEvento") as HTMLInputElement).value;
+      var comentarios = (document.getElementById("comentarios") as HTMLInputElement).value;
       var nombre = (document.getElementById("nombre") as HTMLInputElement).value;
       var telefono = (document.getElementById("telefono") as HTMLInputElement).value;
 
@@ -54,17 +54,17 @@ export class FormularioInicialComponent implements OnInit {
       var fechaEsp = new FechaEsp(auxFecha2); 
     
 
-      this.dbAcc.write('/posibles/'+llave+'_posible/tipo',tipo);
-      this.dbAcc.write('/posibles/'+llave+'_posible/fecha',fechaEsp.toString());
-      this.dbAcc.write('/posibles/'+llave+'_posible/ciudad',ciudad);
-      this.dbAcc.write('/posibles/'+llave+'_posible/tipoLocacion',tipoLocacion);
-      this.dbAcc.write('/posibles/'+llave+'_posible/ceremonia',ceremonia);
-      this.dbAcc.write('/posibles/'+llave+'_posible/numInvitados',numInvitados);
-      this.dbAcc.write('/posibles/'+llave+'_posible/presupuesto',presupuesto);
-      this.dbAcc.write('/posibles/'+llave+'_posible/comentariosIniciales',comentarios);
-      this.dbAcc.write('/posibles/'+llave+'_posible/nombre',nombre);
-      this.dbAcc.write('/posibles/'+llave+'_posible/telefono',telefono);
-      this.dbAcc.write('/posibles/'+llave+'_posible/mail',mail);
+      this.dbAcc.write('/posibles/'+llave+'/tipo',tipo);
+      this.dbAcc.write('/posibles/'+llave+'/fecha',fechaEsp.toString());
+      this.dbAcc.write('/posibles/'+llave+'/ciudad',ciudad);
+      this.dbAcc.write('/posibles/'+llave+'/tipoLocacion',tipoLocacion);
+      this.dbAcc.write('/posibles/'+llave+'/ceremonia',ceremonia);
+      this.dbAcc.write('/posibles/'+llave+'/numInvitados',numInvitados);
+      this.dbAcc.write('/posibles/'+llave+'/presupuesto',"$"+presupuesto);
+      this.dbAcc.write('/posibles/'+llave+'/comentariosIniciales',comentarios);
+      this.dbAcc.write('/posibles/'+llave+'/nombre',nombre);
+      this.dbAcc.write('/posibles/'+llave+'/telefono',telefono);
+      this.dbAcc.write('/posibles/'+llave+'/mail',mail);
 
       alert("Gracias por interesarte en nuestros servicios. Te contactaremos pronto.");
       this.router.navigate(['/principal']);

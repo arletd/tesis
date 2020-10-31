@@ -7,6 +7,29 @@
         </div>
     </div>
 </div>
+<div class="row" >
+    <div class="col-5">
+        <h4>Hay un nuevo evento para organizar:</h4>
+        <h5>Cliente:</h5>
+        <p>Nombre: <span id="nom"></span></p>
+        <p>Telefono: <span id="tel"></span></p>
+        <p>Correo electrónico: <span id="mail"></span></p>
+    </div>
+    <div class="col-5">
+        <h5>Detalles del evento:</h5>
+        <p>Tipo de evento: <span id="tipEv"></span></p>
+        <p>Fecha: <span id="fechaEvento"></span></p>
+        <p>Ciudad: <span id="ciudad"></span></p>
+        <p>Tipo de locacion: <span id="tipLocacion"></span></p>
+        <p>Cermonia: <span id="ceremoniaTipo"></span></p>
+        <p>Invitados: <span id="invitados"></span></p>
+        <p>Presupuesto: <span id="presupuesto"></span></p>
+        <p>Comentarios: <span id="comentariosI"></span></p>        
+    </div>
+    <div class="col-2">
+        <button type="button" class="btn btnGrey" (click)="aceptarEvento()">Aceptar</button>       
+    </div>
+</div>
 <div class="row row-cols-2">
     <div class="col-12  justify-content-center">
         <div class="card w-100 h-100 bg-transparent border-0">
@@ -47,6 +70,7 @@
                     </div>
                     <div class="col-6">
                         <h3>Propuestas</h3>
+                        <!--
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="categoria">Categoría</label>
@@ -62,6 +86,7 @@
                                 </select>
                             </div>
                         </div>
+                    -->
                         <div class="row" id="panelCeremonia">
                             <div class="col">
                                 <h4>Ceremonia</h4>
