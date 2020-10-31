@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from  "@angular/router";
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,16 @@ import { Router, ActivatedRoute } from  "@angular/router";
 export class AppComponent {
   in : boolean = false;
 
-  constructor(private route: ActivatedRoute, private router: Router){};
+  constructor(private route: ActivatedRoute, private router: Router,public afAuth: AngularFireAuth){};
 
+  
+  //Logout de Firebase
   logout(){
-    alert("Cerrando sesión");
+    console.log("Logout done");
     this.in = false;
+    this.afAuth.signOut().then(data=>
+      this.router.navigate(['/'])
+    );
   }
 
   login(){
