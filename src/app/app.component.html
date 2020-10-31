@@ -20,7 +20,7 @@
             <a class="nav-link ingresar" routerLink="/about" routerLinkActive="active">Sobre nosotros</a>
           </li>
           <li class="nav-item" *ngIf="!in">
-            <a class="nav-link ingresar"  routerLink="/login">Ingresar</a>
+            <a class="nav-link ingresar"  routerLink="/login" (click)="login()">Ingresar</a>
           </li>
           <li class="nav-item" *ngIf="in">
             <a class="nav-link ingresar"  routerLink="/principal" (click)="logout()">Cerrar sesión</a>
