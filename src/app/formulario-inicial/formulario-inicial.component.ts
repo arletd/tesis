@@ -30,11 +30,11 @@ export class FormularioInicialComponent implements OnInit {
 
       var llave = this.dbAcc.getKey(mail);
 
-      const form = document.forms.namedItem("formInicial");
-      const radios = form.elements.namedItem("inlineRadioOptions") as RadioNodeList;
-      const radios2 = form.elements.namedItem("inlineRadioOptions2") as RadioNodeList;
-      const ceremonia = radios.value;
-      const tipoCeremonia = radios2.value;
+      var form = document.forms.namedItem("formInicial");
+      var radios = form.elements.namedItem("inlineRadioOptions") as RadioNodeList;
+      var radios2 = form.elements.namedItem("inlineRadioOptions2") as RadioNodeList;
+      var ceremonia = radios.value;
+      var tipoCeremonia = radios2.value;
 
       var tipo = (document.getElementById("tipoEvento") as HTMLInputElement).value;
       var fecha = (document.getElementById("fechaEvento") as HTMLInputElement).value; 

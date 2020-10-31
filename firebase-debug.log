@@ -1,0 +1,13 @@
+[debug] [2020-10-31T04:23:38.598Z] ----------------------------------------------------------------------
+[debug] [2020-10-31T04:23:38.600Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\arlet\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-10-31T04:23:38.600Z] CLI Version:   8.14.1
+[debug] [2020-10-31T04:23:38.600Z] Platform:      win32
+[debug] [2020-10-31T04:23:38.600Z] Node Version:  v12.18.3
+[debug] [2020-10-31T04:23:38.601Z] Time:          Fri Oct 30 2020 22:23:38 GMT-0600 (GMT-06:00)
+[debug] [2020-10-31T04:23:38.601Z] ----------------------------------------------------------------------
+[debug] [2020-10-31T04:23:38.601Z] 
+[debug] [2020-10-31T04:23:38.608Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-31T04:23:38.609Z] > authorizing via signed-in user
+[debug] [2020-10-31T04:23:38.609Z] [iam] checking project tesita-6885a for permissions ["firebase.projects.get"]
+[debug] [2020-10-31T04:23:38.612Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tesita-6885a:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
