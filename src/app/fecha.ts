@@ -1,6 +1,8 @@
-
 export class FechaEsp{
-    constructor() {}
+    private fecha;
+    constructor(fechaParam) {
+        this.fecha= new Date( fechaParam );
+    }
     meses = [
         'enero','febrero','marzo','abril','mayo','junio','julio',
         'agosto','septiembre','octubre','noviembre','diciembre'
@@ -10,15 +12,16 @@ export class FechaEsp{
         'Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'
     ];
 
-    fecha= new Date();
+    
 
-    dia=this.dias[this.fecha.getDay()];
-    numero=this.fecha.getDate();
-    mes=this.meses[this.fecha.getMonth()];
-    anio=this.fecha.getFullYear();
+    
 
     toString(){
-        var resp= this.dia + ", " + this.numero + " de " + this.mes + " de " + this.anio;
+        var dia=this.dias[this.fecha.getDay()];
+        var numero=this.fecha.getDate();
+        var mes=this.meses[this.fecha.getMonth()];
+        var anio=this.fecha.getFullYear();
+        var resp= dia + ", " + numero + " de " + mes + " de " + anio;
         return resp;
     }
 }
