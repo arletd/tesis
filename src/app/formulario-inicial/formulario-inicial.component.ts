@@ -41,7 +41,7 @@ export class FormularioInicialComponent implements OnInit {
       var ciudad = (document.getElementById("ciudad") as HTMLInputElement).value;
       var tipoLocacion = (document.getElementById("tipoLocacion") as HTMLInputElement).value;
       if (ceremonia =="Con ceremonia"){
-        this.dbAcc.write('/posibles/'+llave+'_posible/tipoCeremonia',tipoCeremonia);
+        this.dbAcc.write('/posibles/'+llave+'/tipoCeremonia',tipoCeremonia);
       }
       var numInvitados = (document.getElementById("numInvitados") as HTMLInputElement).value;
       var presupuesto = (document.getElementById("presupuesto") as HTMLInputElement).value;

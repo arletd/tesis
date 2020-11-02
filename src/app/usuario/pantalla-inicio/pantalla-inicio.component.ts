@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pantalla-inicio',
@@ -6,13 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pantalla-inicio.component.css']
 })
 export class PantallaInicioComponent implements OnInit {
-  userName="Usuario 1";
-  bienvenido="Bienvenido";
-  organizador="Organizador 1";
 
+  @Input() userName;
+  @Input() userKey;
+  @Input() orgName;
+  @Input() orgKey;
+  @Input() actual;
+  
+  
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {dbFunctions} from './../../databaseAccess/dbFunc';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-general',
@@ -7,9 +10,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneralComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private dbAcc: dbFunctions, public afAuth: AngularFireAuth) { }
+
+  userKey;
+  orgKey;
+  actual;
+  userName;
+  orgName;
 
   ngOnInit(): void {
+    this.userKey=this.route.snapshot.paramMap.get('id');
+    this.datosDelUsuario();
+  }
+
+  async datosDelUsuario(){
+    var aux = await this.dbAcc.read('/usuarios/'+this.userKey+"/");
+    var obj = JSON.parse(JSON.stringify(aux));
+    this.actual = obj.eventoActual;
+    var nomAux = obj.nombre;
+    var nomArray = nomAux.split(" ");
+    this.userName=nomArray[0];
+    this.getOrganizador();
+  }
+
+  async getOrganizador(){
+    var org = await this.dbAcc.read('/eventos/'+this.actual+"/organiza");
+    this.orgKey = org;
+    this.datosOrganizador(org);
+  }
+  async datosOrganizador(org){
+    var aux = await this.dbAcc.read('/usuarios/'+org+"/");
+    var obj = JSON.parse(JSON.stringify(aux));
+    var nomAux = obj.nombre;
+    var nomArray = nomAux.split(" ");
+    this.orgName=nomArray[0];
   }
 
   dispInicio: boolean = true;

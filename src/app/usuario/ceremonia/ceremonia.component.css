@@ -15,3 +15,9 @@ p{
     background-color: #F5F3B2;
     border-color: #cbb46f;
 }
+
+.myText{
+    font-family: arial;
+    font-size: 15px;
+    text-align: justify;
+}

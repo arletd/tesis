@@ -36,8 +36,22 @@ import { AngularFirestore } from "@angular/fire/firestore";
         const doc= await reff.once("value",function(snapshot){ //Se crea un snapshot para copiar lo que se ve en el arbol
            k=(snapshot.val());
         });
-        return k; 
+        
+        return k;
     } 
+
+    //Metodo asincrono para leer una rama de la base de datos y lo devuelve como JSON
+    async readJSON(ref:string){ //Con este codigo podemos leer información especifica dentro del arbol.
+      var k="";
+      var reff=this.db.database.ref('/'+ref);
+      
+      const doc= await reff.once("value",function(snapshot){ //Se crea un snapshot para copiar lo que se ve en el arbol
+         k=(snapshot.val());
+      });
+
+      var obj = JSON.parse(JSON.stringify(k));
+      return obj; 
+  } 
 
     //Metodo para obtener la llave dado un correo, se filtran caracteres raros y lo que esta despues del @
     getKey(email: string){

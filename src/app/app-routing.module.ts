@@ -26,11 +26,11 @@ const routes: Routes = [
     component: FormularioInicialComponent, 
   },
   {
-    path: 'general',
+    path: 'general/:id',
     component: GeneralComponent,
   },
   {
-    path: 'organizador',
+    path: 'organizador/:id',
     component: OrganizadorComponent,
   },
   { 

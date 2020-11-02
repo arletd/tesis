@@ -40,11 +40,11 @@ export class LoginComponent implements OnInit {
         console.log(tipoAcc);
         //Es un usuario del tipo cliente
         if(tipoAcc=="A"){
-          this.router.navigate(['/general']);
+          this.router.navigate(['/general/'+llave]);
         }
         //Es un usuario de tipo organizador
         else if(tipoAcc=="B"){
-          this.router.navigate(['/organizador']);
+          this.router.navigate(['/organizador/'+llave]);
         }
         this.app.in=true;
       })

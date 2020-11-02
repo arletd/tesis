@@ -13,13 +13,13 @@
     </div>
   </div>
   <div class="col-10">
-    <app-pantalla-inicio *ngIf="dispInicio"></app-pantalla-inicio>
-    <app-ceremonia *ngIf="dispCeremonia"></app-ceremonia>
-    <app-locacion *ngIf="dispLocacion"></app-locacion>
-    <app-decoracion *ngIf="dispDecoracion"></app-decoracion>
-    <app-banquete *ngIf="dispBanquete"></app-banquete>
-    <app-entretenimiento *ngIf="dispEntretenimiento"></app-entretenimiento>
-    <app-extras *ngIf="dispExtras"></app-extras>
+    <app-pantalla-inicio *ngIf="dispInicio" [userName]="userName" [orgName]="orgName" [userKey]="userKey" [orgKey]="orgKey" [actual]="actual"></app-pantalla-inicio>
+    <app-ceremonia *ngIf="dispCeremonia" [userName]="userName" [orgName]="orgName" [userKey]="userKey" [orgKey]="orgKey" [actual]="actual"></app-ceremonia>
+    <app-locacion *ngIf="dispLocacion" [userName]="userName" [orgName]="orgName" [userKey]="userKey" [orgKey]="orgKey" [actual]="actual"></app-locacion>
+    <app-decoracion *ngIf="dispDecoracion" [userName]="userName" [orgName]="orgName" [userKey]="userKey" [orgKey]="orgKey" [actual]="actual"></app-decoracion>
+    <app-banquete *ngIf="dispBanquete" [userName]="userName" [orgName]="orgName" [userKey]="userKey" [orgKey]="orgKey" [actual]="actual"></app-banquete>
+    <app-entretenimiento *ngIf="dispEntretenimiento" [userName]="userName" [orgName]="orgName" [userKey]="userKey" [orgKey]="orgKey" [actual]="actual"></app-entretenimiento>
+    <app-extras *ngIf="dispExtras" [userName]="userName" [orgName]="orgName" [userKey]="userKey" [orgKey]="orgKey" [actual]="actual"></app-extras>
   </div>
   
 </div>

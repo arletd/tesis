@@ -7,12 +7,12 @@
         </div>
     </div>
 </div>
-<div class="row" >
+<div class="row" *ngIf="posibles">
     <div class="col-5">
         <h4>Hay un nuevo evento para organizar:</h4>
         <h5>Cliente:</h5>
         <p>Nombre: <span id="nom"></span></p>
-        <p>Telefono: <span id="tel"></span></p>
+        <p>Teléfono: <span id="tel"></span></p>
         <p>Correo electrónico: <span id="mail"></span></p>
     </div>
     <div class="col-5">
@@ -20,7 +20,7 @@
         <p>Tipo de evento: <span id="tipEv"></span></p>
         <p>Fecha: <span id="fechaEvento"></span></p>
         <p>Ciudad: <span id="ciudad"></span></p>
-        <p>Tipo de locacion: <span id="tipLocacion"></span></p>
+        <p>Tipo de locación: <span id="tipLocacion"></span></p>
         <p>Cermonia: <span id="ceremoniaTipo"></span></p>
         <p>Invitados: <span id="invitados"></span></p>
         <p>Presupuesto: <span id="presupuesto"></span></p>
@@ -35,115 +35,119 @@
         <div class="card w-100 h-100 bg-transparent border-0">
             <div class="card-body ">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col">
                         <h3>Información</h3>
-                        <div class="row" id="panelCeremoniaInfo">
+                        <div class="row">
+                            <div class="col" id="panelInformacionCliente"></div>
+                            <div class="col" id="panelInformacionEvento1"></div>
+                            <div class="col" id="panelInformacionEvento2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Detalles</h3>
+                        <div class="row" id="infoCeremonia">
                             <div class="col">
                                 <h4>Ceremonia</h4>
-                                <div class="row">
-                                    <div class="col">
-                                        <p>Fecha: <span id="fechaCer1prop"></span> </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <p>Tipo: <span id="tipoCer1prop"></span></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <p>Dirección: <span id="dirCer1"></span></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <p>Capacidad: <span id="capCer1"></span></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <p>Detalles: <span id="detCer1"></span></p>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="infoLocacion">
+                            <div class="col">
+                                <h4>Locación</h4>
+                            </div>
+                        </div>
+                        <div class="row" id="infoDecoracion">
+                            <div class="col">
+                                <h4>Decoración</h4>
+                            </div>
+                        </div>
+                        <div class="row" id="infoBanquete">
+                            <div class="col">
+                                <h4>Banquete y Bebidas</h4>
+                            </div>
+                        </div>
+                        <div class="row" id="infoEntretenimiento">
+                            <div class="col">
+                                <h4>Entretenimiento</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
                         <h3>Propuestas</h3>
-                        <!--
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="categoria">Categoría</label>
                             </div>
                             <div class="form-group col-md-8">
-                                <select id="categoria" class="form-control">
+                                <select id="categoria" class="form-control" (change)="opcionSeleccionada()">
                                     <option disabled selected>Selecciona una categoría</option>
-                                    <option value="Ceremonia">Ceremonia</option>
+                                    <option value="Ceremonia" *ngIf="ceremoniaBand">Ceremonia</option>
                                     <option value="Locación">Locación</option>
                                     <option value="Decoración">Decoración</option>
                                     <option value="Banquete y bebidas">Banquete y bebidas</option>
-                                    <option value="Entretenimiento">Entretenimiento</option>
                                 </select>
                             </div>
                         </div>
-                    -->
-                        <div class="row" id="panelCeremonia">
-                            <div class="col">
-                                <h4>Ceremonia</h4>
-                                <div class="form-row">
-                                    <div class="form-group col-2">
-                                        <label for="nombreCeremonia1">Nombre:</label>
-                                    </div>
-                                    <div class="form-group col-10">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="nombreCeremonia1">    
+                        <div id="panelCeremonia">
+                            <div class="row" *ngIf="ceremoniaBand">
+                                <div class="col">
+                                    <h4>Ceremonia</h4>
+                                    <div class="form-row">
+                                        <div class="form-group col-2">
+                                            <label for="nombreCeremonia">Nombre:</label>
+                                        </div>
+                                        <div class="form-group col-10">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" id="nombreCeremonia" placeholder="Juzgado Familiar 87">    
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-2">
-                                        <label for="fotosCeremonia1">Fotos:</label>
-                                    </div>
-                                    <div class="form-group col-10">
-                                        <div class="form-group">
-                                            <input type="file" class="form-control-file" id="fotosCeremonia1" multiple >
+                                    <div class="form-row">
+                                        <div class="form-group col-2">
+                                            <label for="fotosCeremonia">Fotos:</label>
+                                        </div>
+                                        <div class="form-group col-10">
+                                            <div class="form-group">
+                                                <input type="file" class="form-control-file" id="fotosCeremonia" multiple (change)="cargaFotosCeremonia()" >
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-2">
-                                        <label for="direccionCeremonia1">Dirección:</label>
-                                    </div>
-                                    <div class="form-group col-10">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="direccionCeremonia1">    
+                                    <div class="form-row">
+                                        <div class="form-group col-2">
+                                            <label for="direccionCeremonia">Dirección:</label>
+                                        </div>
+                                        <div class="form-group col-10">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" id="direccionCeremonia" placeholder="Av. Montevideo 1243, colonia Agraristas. Gustavo A. Madero">    
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-2">
-                                        <label for="capacidadCeremonia1">Capacidad:</label>
-                                    </div>
-                                    <div class="form-group col-10">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="capacidadCeremonia1">    
+                                    <div class="form-row">
+                                        <div class="form-group col-2">
+                                            <label for="capacidadCeremonia">Capacidad:</label>
+                                        </div>
+                                        <div class="form-group col-10">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" id="capacidadCeremonia" placeholder="300 personas">    
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-2">
-                                        <label for="detallesCeremonia1">Detalles:</label>
-                                    </div>
-                                    <div class="form-group col-10">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="detallesCeremonia1">    
+                                    <div class="form-row">
+                                        <div class="form-group col-2">
+                                            <label for="detallesCeremonia">Detalles:</label>
+                                        </div>
+                                        <div class="form-group col-10">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" id="detallesCeremonia" >    
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-2 offset-5 justify-content-center">
-                                        <button type="button" class="btn btnGrey" (click)="prueba()">Guardar</button>
-                
+                                    <div class="row">
+                                        <div class="col-2 offset-5 justify-content-center">
+                                            <button type="button" class="btn btnGrey" (click)="agregarCeremonia()">Guardar</button>
+                    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -153,41 +157,41 @@
                                 <h4>Locación</h4>
                                 <div class="form-row">
                                     <div class="form-group col-2">
-                                        <label for="nombreLocacion1">Nombre:</label>
+                                        <label for="nombreLocacion">Nombre:</label>
                                     </div>
                                     <div class="form-group col-10">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="nombreLocacion1">    
+                                            <input type="text" class="form-control" id="nombreLocacion" placeholder="Jardín María Bonita">    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-2">
-                                        <label for="fotosLocacion1">Fotos:</label>
+                                        <label for="fotosLocacion">Fotos:</label>
                                     </div>
-                                    <div class="form-group col-10">
+                                    <div class="form-group col-8">
                                         <div class="form-group">
-                                            <input type="file" class="form-control-file" id="fotosLocacion1" multiple >
+                                            <input type="file" class="form-control-file" id="fotosLocacion" multiple (change)="cargaFotosLocacion()" >
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-2">
-                                        <label for="direccionLocacion1">Dirección:</label>
+                                        <label for="direccionLocacion">Dirección:</label>
                                     </div>
                                     <div class="form-group col-10">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="direccionLocacion1">    
+                                            <input type="text" class="form-control" id="direccionLocacion" placeholder="Av. Montevideo 1243, colonia Agraristas. Gustavo A. Madero">    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-2">
-                                        <label for="capacidadLocacion1">Capacidad:</label>
+                                        <label for="capacidadLocacion">Capacidad:</label>
                                     </div>
                                     <div class="form-group col-10">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="capacidadLocacion1">    
+                                            <input type="text" class="form-control" id="capacidadLocacion" placeholder="100 personas">    
                                         </div>
                                     </div>
                                 </div>
@@ -197,13 +201,13 @@
                                     </div>
                                     <div class="form-group col-10">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="detallesLocacion1">    
+                                            <input type="text" class="form-control" id="detallesLocacion">    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-2 offset-5 justify-content-center">
-                                        <button type="button" class="btn btnGrey">Guardar</button>
+                                        <button type="button" class="btn btnGrey" (click)="agregarLocacion()">Guardar</button>
                 
                                     </div>
                                 </div>
@@ -214,28 +218,37 @@
                                 <h4>Decoración</h4>
                                 <div class="form-row">
                                     <div class="form-group col-2">
-                                        <label for="fotosDecoracion1">Fotos:</label>
+                                        <label for="nombreDecoracion">Nombre:</label>
                                     </div>
                                     <div class="form-group col-10">
-                                        <div class="form-group">
-                                            <input type="file" class="form-control-file" id="fotosDecoracion1" multiple >
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="nombreDecoracion" placeholder="La casa de papel">    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-2">
-                                        <label for="detallesDecoracion1">Detalles:</label>
+                                        <label for="fotosDecoracion">Fotos:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="form-group">
+                                            <input type="file" class="form-control-file" id="fotosDecoracion" multiple (change)="cargaFotosDecoracion()">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="detallesDecoracion">Detalles:</label>
                                     </div>
                                     <div class="form-group col-10">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="detallesDecoracion1">    
+                                            <input type="text" class="form-control" id="detallesDecoracion">    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-2 offset-5 justify-content-center">
-                                        <button type="button" class="btn btnGrey">Guardar</button>
-                
+                                        <button type="button" class="btn btnGrey" (click)="agregarDecoracion()">Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -243,6 +256,29 @@
                         <div class="row" id="panelBanquete">
                             <div class="col">
                                 <h4>Banquete</h4>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="nombreMenu">Nombre:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="nombreMenu" placeholder="Menú infantil 1">    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-2">
+                                        <label for="contenidoMenu">Menú:</label>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <input type="file" id="contenidoMenu" (change)="cargaArchivosMenu()">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 offset-5 justify-content-center">
+                                        <button type="button" class="btn btnGrey" (click)="agregarMenu()">Guardar</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
